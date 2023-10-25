@@ -27,5 +27,13 @@ class PaginationHelper {
   pageIndex(itemIndex) {
     // determines what page an item is on. Zero based indexes
     // this method should return -1 for itemIndex values that are out of range
+
+    if (itemIndex >= this.items.length || itemIndex < 0) return -1;
+
+    var page = 0;
+    for (var i = 0; i < this.items.length; i += this.itemsPerPage) {
+      if (i + this.itemsPerPage >= itemIndex + 1) return page;
+      page++;
+    }
   }
 }
