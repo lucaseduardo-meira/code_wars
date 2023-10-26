@@ -9,7 +9,7 @@ function zero(operation) {
   if (operation === undefined) return 0;
   const operator = operation[0];
   const y = operation[1];
-  return calculator(1, operator, y);
+  return calculator(0, operator, y);
 }
 function one(operation) {
   if (operation === undefined) return 1;
