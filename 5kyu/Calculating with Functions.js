@@ -1,3 +1,10 @@
+function calculator(x, operator, y) {
+  if (operator === "+") return x + y;
+  if (operator === "-") return x - y;
+  if (operator === "/") return Math.floor(x / y);
+  if (operator === "*") return x * y;
+}
+
 function zero(operation) {
   if (operation === undefined) return 0;
   const operator = operation[0];
