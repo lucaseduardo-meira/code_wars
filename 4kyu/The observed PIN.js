@@ -100,6 +100,5 @@ function getPINs(observed) {
       }
     }
   }
-
-  console.log(possiblesPin);
+  return possiblesPin;
 }
