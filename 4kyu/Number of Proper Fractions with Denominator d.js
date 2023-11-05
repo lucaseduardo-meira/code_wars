@@ -12,3 +12,5 @@ function properFractions(n) {
   }
   return n - divisible.length;
 }
+
+// Not working for bigger numbers
