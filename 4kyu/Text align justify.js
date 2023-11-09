@@ -34,14 +34,4 @@ function justify(text, width) {
   console.log(lines.join("\n"));
 }
 
-// justify("12 45 1234 12", 6);
-
-var j = 1;
-
-while (j < 11) {
-  for (var i = 0; i < 4; i++) {
-    console.log(i);
-    j++;
-  }
-  console.log(j);
-}
+justify("12 45 1234 12", 15);
