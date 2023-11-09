@@ -16,16 +16,32 @@ function justify(text, width) {
       else currentWord = word;
     }
   });
-  const lines = provLine.map((line) => {
-    while (line.length < width) {
-      for (var i = 0; i <= line.length; i++) {
-        if (line.length === width) break;
-        else if (line[i] === " ") {
-          line = line.split("").splice(i, 0, " ").join("");
+  const lines = provLine.map((line, idx) => {
+    if (idx === provLine.length - 1) return line;
+    else {
+      while (line.length < width) {
+        for (var i = 0; i <= line.length; i++) {
+          if (line.length === width) break;
+          else if (line[i] === " ") {
+            line = line.slice(0, i) + " " + line.slice(i);
+          }
         }
+        return line;
       }
+      return line;
     }
-    return line;
   });
-  console.log(lines);
+  console.log(lines.join("\n"));
+}
+
+// justify("12 45 1234 12", 6);
+
+var j = 1;
+
+while (j < 11) {
+  for (var i = 0; i < 4; i++) {
+    console.log(i);
+    j++;
+  }
+  console.log(j);
 }
